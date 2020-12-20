@@ -1,0 +1,233 @@
+:root {
+  /*Основные цвета текста */
+  --pri-text-color: #212121;
+  --sec-text-color: #757575;
+  --accent-color: #2196f3;
+
+  /* Основные цвета фона */
+  --pri-background-color: #ffffff;
+  --sec-background-color: #2f303a;
+}
+
+/* Стили по тегам */
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+header {
+  background: var(--pri-background-color);
+}
+
+footer {
+  background: var(--sec-background-color);
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Лого */
+.logo-header {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  color: #000000;
+}
+
+.logo-footer {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  color: #ffffff;
+}
+
+.logo-sec {
+  color: var(--accent-color);
+}
+
+/* Хедер */
+/* Навигация */
+.site-nav .link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--pri-text-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+/* Контакты-хедер */
+.contacts-header .link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--sec-text-color);
+}
+.contacts-header .link:hover,
+.contacts-header .link:focus {
+  color: var(--accent-color);
+}
+
+/* Футер */
+.address {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.contacts-footer .link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Главный контент - Студия */
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--pri-text-color);
+}
+/* Герой */
+.hero {
+  background: var(--sec-background-color);
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: var(--accent-color);
+}
+
+/* Особенности */
+.features {
+  background: var(--pri-background-color);
+}
+
+.features-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--pri-text-color);
+}
+
+.features-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--sec-text-color);
+}
+
+/* Чем мы занимаемся */
+.we-do {
+  background: var(--pri-background-color);
+}
+
+/* Наша командa */
+.team {
+  background: #f5f4fa;
+}
+
+.team-list .item {
+  background-color: var(--pri-background-color);
+}
+
+.team-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--pri-text-color);
+}
+
+.team-profession {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--sec-text-color);
+}
+
+/* Главный контент - Портфолио */
+.portfolio {
+  background: var(--pri-background-color);
+}
+/* Кнопки-фильтры */
+.filter-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--pri-text-color);
+  background: #f5f4fa;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background: var(--accent-color);
+}
+
+/* Реализованные проекты */
+.progect-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  color: var(--pri-text-color)
+}
+
+.progect-type {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: var(--sec-text-color)
+}
