@@ -1,3 +1,11 @@
+html{
+    box-sizing: border-box;
+}
+
+*, ::before, ::after{
+    box-sizing: inherit;
+}
+
 :root {
   /*Основные цвета текста */
   --pri-text-color: #212121;
@@ -13,15 +21,22 @@
 body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
-}
-header {
-  background: var(--pri-background-color);
+  margin: 0;
 }
 
-footer {
-  background: var(--sec-background-color);
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 li {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -29,22 +44,50 @@ a {
   text-decoration: none;
 }
 
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*Скрытые заголовки*/
+.hidden-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Лого */
 .logo-header {
+  margin-right: 93px;
+
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 31px;
+
   color: #000000;
 }
 
 .logo-footer {
+  margin-top: 60px;
+  margin-bottom: 20px;
+
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 31px;
+  
   color: #ffffff;
 }
 
@@ -53,11 +96,38 @@ a {
 }
 
 /* Хедер */
+.page-header {
+  display: flex;
+
+  border-bottom: #E5E5E5 1px solid;
+  background: var(--pri-background-color);
+}
+
 /* Навигация */
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  width: 294px;
+
+  padding-left: 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav .link {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+
   color: var(--pri-text-color);
 }
 
@@ -71,10 +141,21 @@ a {
 }
 
 /* Контакты-хедер */
+.contacts-header{
+display: flex;
+align-items: center;
+margin-left: auto;
+}
+
+.contacts-header .item:not(:last-child){
+  margin-right: 50px;
+}
+
 .contacts-header .link {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+
   color: var(--sec-text-color);
 }
 .contacts-header .link:hover,
@@ -83,13 +164,32 @@ a {
 }
 
 /* Футер */
+.page-footer {
+  display: flex;
+  flex-direction: column;
+
+  background: var(--sec-background-color);
+}
+
+.requisites {
+margin-bottom: 60px;
+
+width: 231px;
+}
+
 .address {
+  margin-bottom: 9px;
+
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+.contacts-footer .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .contacts-footer .link {
@@ -102,34 +202,55 @@ a {
 
 /* Главный контент - Студия */
 .section-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  line-height:42px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--pri-text-color);
 }
 /* Герой */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  
+  text-align: center;
   background: var(--sec-background-color);
 }
 
 .hero-title {
+  width: 696px;
+
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 60px;
-  text-align: center;
+
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
 }
 
 .hero-button {
+  border: transparent;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
-  align-items: center;
-  text-align: center;
+
   letter-spacing: 0.06em;
   color: #ffffff;
   background-color: var(--accent-color);
@@ -137,10 +258,27 @@ a {
 
 /* Особенности */
 .features {
+  margin-top: 94px;
+
   background: var(--pri-background-color);
 }
 
+.features-list {
+  display: flex;
+}
+
+.features-list .item {
+  width: 270px;
+  margin-right: 30px;
+}
+
+.features-list .item:last-child {
+  margin-right: 0;
+}
+
 .features-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -159,19 +297,49 @@ a {
 
 /* Чем мы занимаемся */
 .we-do {
+  margin-top: 94px;
+
   background: var(--pri-background-color);
+}
+
+.we-do-list {
+  display: flex;
+}
+
+.we-do-list .item {
+  width: 370px;
+  margin-right: 30px;
+}
+
+.we-do-list .item:last-child{
+  margin-right: 0;
 }
 
 /* Наша командa */
 .team {
+  margin-top: 94px;
+  padding-top: 94px; 
+  padding-bottom: 94px; 
+
   background: #f5f4fa;
 }
 
+.team-list{
+  display: flex;
+}
+
 .team-list .item {
+  width: 270px;
+  margin-right: 30px;
   background-color: var(--pri-background-color);
 }
 
+.team-list .item:last-child {
+  margin-right: 0;
+}
 .team-name {
+  margin-top: 30px;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -181,6 +349,7 @@ a {
 }
 
 .team-profession {
+  margin-bottom: 30px;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
@@ -191,10 +360,44 @@ a {
 
 /* Главный контент - Портфолио */
 .portfolio {
+  margin-top: 94px;
+  margin-bottom: 94px;
+
+  text-align: center;
+
   background: var(--pri-background-color);
 }
 /* Кнопки-фильтры */
+.filter {
+  display: flex;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 611px;
+
+}
+
+.filter .item {
+  margin-right: 8px;
+}
+
+.filter .item:last-child {
+  margin-right: 0;
+}
+
 .filter-btn {
+  border: transparent;
+  border-radius: 4px;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
@@ -216,15 +419,44 @@ a {
 }
 
 /* Реализованные проекты */
+.progects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 34px;
+}
+
+.progects .item {
+  border: 1px solid #EEEEEE;
+  width: 370px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.progects .item:nth-child(3n) {
+    margin-right: 0px;
+}
+
+.progects .item:nth-last-child(-n+3){
+    margin-bottom: 0px;
+}
+
+.progects img{
+  margin-bottom: 20px;
+}
+
 .progect-name {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
+
   line-height: 36px;
   letter-spacing: 0.06em;
   color: var(--pri-text-color)
 }
 
 .progect-type {
+  margin-bottom: 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
