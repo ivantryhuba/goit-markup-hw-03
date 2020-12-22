@@ -366,14 +366,16 @@ align-items: center;
 }
 
 /* Главный контент - Портфолио */
-.portfolio {
+.portfolio-section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
 
+.filter-section {
   text-align: center;
-
   background: var(--pri-background-color);
 }
+
 /* Кнопки-фильтры */
 .filter {
   display: flex;
@@ -426,10 +428,13 @@ align-items: center;
 }
 
 /* Реализованные проекты */
+.progects {
+  margin-top: 50px;
+}
+
 .progects-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 34px;
 }
 
 .progects-list .item {
